@@ -1,2 +1,1 @@
-# angular-to-do-list
-Angular To-Do List
+# Angular To-Do List
