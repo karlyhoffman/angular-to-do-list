@@ -4,6 +4,5 @@
 	{"task": "Create Angular application in main JavaScript file"},
 	{"task": "Bootstrap `ng-app` to index.html body tags"},
 	{"task": "Create directives and build away!"},
-	{"task": "Stylize"},
-	{"task": "Delete me"}
+	{"task": "Stylize"}
 ]
