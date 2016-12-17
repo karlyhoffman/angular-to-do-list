@@ -7,7 +7,7 @@ Even though this application is using mock data ( `data/todos.json` ) to simulat
 
 
 For this project I used 
-[angular-http-server](https://www.npmjs.com/package/angular-http-server):
+[angular-http-server](https://www.npmjs.com/package/angular-http-server). In command line:
 
 `npm install -g angular-http-server`
 
