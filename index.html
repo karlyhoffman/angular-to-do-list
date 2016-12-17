@@ -3,14 +3,12 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Just Do It</title>
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body ng-app="todoListApp">
 	<h1>To-Do</h1>
 	<div ng-controller="mainCtrl" class="list">
-		<div class="add" ng-click="addTodo()">
-			<button>+ New Task</button>
-		</div>
 		<div ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" ng-repeat="todo in todos | orderBy: 'completed' : false" ng-init="todo.completed = false" class="item">
 			<input ng-model="todo.completed" type="checkbox" />
 			<label ng-click="editing = true" ng-hide="editing" class="editing-label">
@@ -22,6 +20,9 @@
 				<button ng-click="saveTodo(todo)">save</button>
 				<button ng-click="deleteTodo(todo, $index)" class="delete">delete</button>
 			</div>
+		</div>
+		<div class="add">
+			<button ng-click="addTodo()">+ New Task</button>
 		</div>
 	</div>
 	<script src="scripts/angular/angular.js" type="text/javascript"></script>
