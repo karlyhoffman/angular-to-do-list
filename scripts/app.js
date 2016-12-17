@@ -1,1 +1,4 @@
-angular.module("todoListApp", []);
+angular.module("todoListApp", [])
+.controller('mainCtrl', function($scope){
+	
+});
