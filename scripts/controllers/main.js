@@ -10,7 +10,9 @@ angular.module("todoListApp")
 	});
 	$scope.deleteTodo = function(todo, $index){
 		dataService.deleteTodo(todo);
-		$scope.todos.splice($index, 1);
+		$scope.todos = $scope.todos.filter(function(val) {
+		    return !(val.task === todo.task);
+		});
 	};
 	$scope.saveTodo = function(todo){
 		dataService.saveTodo(todo);

@@ -13,12 +13,12 @@
 		</div>
 		<div ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" ng-repeat="todo in todos | orderBy: 'completed' : false" ng-init="todo.completed = false" class="item">
 			<input ng-model="todo.completed" type="checkbox" />
-			<label ng-hide="editing" class="editing-label">
+			<label ng-click="editing = true" ng-hide="editing" class="editing-label">
 				{{todo.task}}
 			</label>
 			<input ng-show="editing" ng-blur="editing = false" ng-model="todo.task" class="editing-label" type="text">
 			<div class="actions">
-				<button ng-click="editing = !editing">edit</button>
+				<!-- <button ng-click="editing = !editing">edit</button> -->
 				<button ng-click="saveTodo(todo)">save</button>
 				<button ng-click="deleteTodo(todo, $index)" class="delete">delete</button>
 			</div>
